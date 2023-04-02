@@ -5,14 +5,14 @@
 </head>
 <body>
   <a-scene embedded style="height: 100%; width: 100%;">
-    <a-camera>
-      <a-cursor
-        color="black"
-        maxDistance="30"
-        fuseTimeout="1500"
-        raycaster="objects: .clickable">
-      </a-cursor>
-    </a-camera>
+ <a-camera position="0 1.6 0">
+  <a-cursor
+    color="black"
+    maxDistance="30"
+    fuseTimeout="1500"
+    raycaster="objects: .clickable">
+  </a-cursor>
+</a-camera>
     <a-box class="clickable" position="0 0.5 -3" rotation="0 45 0" color="#4CC3D9">
       <a-animation begin="click" attribute="rotation" dur="2000" to="0 405 0"></a-animation>
     </a-box>
