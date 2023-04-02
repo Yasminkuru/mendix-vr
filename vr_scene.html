@@ -5,9 +5,14 @@
 </head>
 <body>
   <a-scene embedded style="height: 100%; width: 100%;">
-    <a-box position="0 0.5 -3" rotation="0 45 0" color="#4CC3D9">
-      <a-animation begin="click" attribute="rotation" dur="2000" to="0 405 0"></a-animation>
+    <a-box position="0 0.5 -3" rotation="0 45 0" color="#4CC3D9" onclick="handleClick(this)">
+      <a-animation begin="startRotation" attribute="rotation" dur="2000" to="0 405 0"></a-animation>
     </a-box>
   </a-scene>
+  <script>
+    function handleClick(element) {
+      element.emit('startRotation');
+    }
+  </script>
 </body>
 </html>
